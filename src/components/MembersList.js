@@ -1,22 +1,17 @@
 import members from "../data/members";
-
+import MemberItem from "./MemberItem";
+import { Container, Row } from "react-bootstrap";
 
 const MembersList = () => {
-    
-    const member = members.map
+  const member = members.map((member) => <MemberItem member={member} />);
 
-    return (
-        <div className='header'>
-            <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap" />
-  <div class="card-body">
-    <h5 class="card-title">{member.firstName}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <Container className="mt-5 " fluid="md">
+        <Row>{member}</Row>
+      </Container>
+    </div>
+  );
+};
 
-export default MembersList();
+export default MembersList;
