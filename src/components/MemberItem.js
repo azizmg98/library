@@ -20,7 +20,7 @@ const MemberItem = ({ member }) => {
         <Button onClick={() => setIsOpen(true)} variant="primary">
           View member PH
         </Button>
-        <MemberDetail isOpen={isOpen} setIsOpen={setIsOpen} />
+        <MemberDetail member={member} isOpen={isOpen} setIsOpen={setIsOpen} />
       </Card.Body>
     </Card>
   );
