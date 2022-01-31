@@ -13,12 +13,8 @@ const MemberDetail = ({ member, isOpen, setIsOpen }) => {
         <Modal.Title id="contained-modal-title-vcenter">{`${member.firstName} ${member.lastName}`}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <h4>{`${member.firstName} has a ${member.membership} membership`}</h4>
+        <p>{`${member.firstName} is currently borrowing ${member.currentlyBorrowedBooks.length} book(s)`}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={() => setIsOpen(false)}>Close</Button>

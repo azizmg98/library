@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const MemberItem = ({ member }) => {
   const [isOpen, setIsOpen] = useState(false);
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
+  // function handleClick() {
+  //   setIsOpen(!isOpen);
+  // }
 
   return (
     <Card
@@ -18,7 +18,7 @@ const MemberItem = ({ member }) => {
       <Card.Body>
         <Card.Title>{`${member.firstName} ${member.lastName}`}</Card.Title>
         <Button onClick={() => setIsOpen(true)} variant="primary">
-          View member PH
+          View member
         </Button>
         <MemberDetail member={member} isOpen={isOpen} setIsOpen={setIsOpen} />
       </Card.Body>

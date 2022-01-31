@@ -5,7 +5,7 @@ function SearchBar({ setQuery }) {
     <Form className="d-flex">
       <FormControl
         type="search"
-        placeholder="Search"
+        placeholder="Search by book title or genre"
         className="me-2"
         aria-label="Search"
         onChange={(event) => setQuery(event.target.value)}
